@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Wei Chen's Contact</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link rel="stylesheet" type="text/css" href="mystyle_con.css"> -->
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+crossorigin="anonymous"
+/>
+
+<!-- for loading bootstrap javascript -->
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+crossorigin="anonymous"
+></script>
+
+<!-- including jquery through CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function(){
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function(){
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        })
+      })
+    })
+  </script>
+  <style>
+    footer{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div id="wrapper">  
+  <header>
+      <h1 style="padding-left: 35%;">Wei Chen's Contact</h1>
+  </header>  
+  
+   <main> 
+    <form class="d-flex">
+        <input
+          class="form-control me-2"
+          id="myInput"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">
+          Search
+        </button>
+      </form>
+        <!-- table -->
+    <div id="section2" class="container" style="padding-top: 100px;">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Link</th>
+            </tr>
+          </thead>
+          <tbody id="myTable">
+            <tr>
+              <th scope="row">1</th>
+              <td>Email</td>
+              <td><a href="mailto:chen.wei6@northeastern.edu">chen.wei6@northeastern.edu</a></td>
+              
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Tel</td>
+              <td><a href="tel://617-955-7958">617-955-7958</a></td>
+             
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Github</td>
+              <td><a href="https://github.com/chelseawei">https://github.com/chelseawei</a></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Linkedin</td>
+                <td><a href = "https://www.linkedin.com/in/wei-chen-a92b59224/">https://www.linkedin.com/in/wei-chen-a92b59224</a></td>
+              </tr>
+          </tbody>
+        </table>
+        
+      </div>
+      <figure class="figure" style="width: 30%; height: 30%;" >
+        <img src="image/image1.JPG" class="figure-img img-fluid rounded" alt="Photo">
+        <figcaption class="figure-caption">Photo.</figcaption>
+      </figure>
+    <!-- <figure>
+        <div class = "gallery">
+            <a href = "image/image1.JPG" target="_blank">
+            <img src="image/image1.JPG" width="250" height="200" alt="Photo">
+        </a>
+            </div>
+	 <figcaption>Photo</figcaption>
+	 </figure>
+     -->
+   </main> 
+   <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Wei Chen</span>
+    </div>
+  </footer>
+  </div> 
+</body>
+</html>
